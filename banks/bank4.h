@@ -1,9 +1,9 @@
-extern const unsigned char	stage_02_map_bin[2304];
-#define				stage_02_map_bin_size 2304
-#define				stage_02_map_bin_bank 4
-extern const unsigned char	stage_03_map_bin[2304];
-#define				stage_03_map_bin_size 2304
-#define				stage_03_map_bin_bank 4
+extern const unsigned char	stage_04_map_bin[2304];
+#define				stage_04_map_bin_size 2304
+#define				stage_04_map_bin_bank 4
+extern const unsigned char	stage_07_map_bin[2304];
+#define				stage_07_map_bin_size 2304
+#define				stage_07_map_bin_bank 4
 extern const unsigned char	audio_the_chase_psg[1053];
 #define				audio_the_chase_psg_size 1053
 #define				audio_the_chase_psg_bank 4
@@ -46,33 +46,33 @@ extern const unsigned char	sfx_confirm_psg[34];
 extern const unsigned char	black_bg_pal_bin[17];
 #define				black_bg_pal_bin_size 17
 #define				black_bg_pal_bin_bank 4
-extern const unsigned char	stage_01_bg_pal_bin[16];
-#define				stage_01_bg_pal_bin_size 16
-#define				stage_01_bg_pal_bin_bank 4
-extern const unsigned char	stage_04_bg_pal_bin[16];
-#define				stage_04_bg_pal_bin_size 16
-#define				stage_04_bg_pal_bin_bank 4
-extern const unsigned char	stage_03_bg_pal_bin[16];
-#define				stage_03_bg_pal_bin_size 16
-#define				stage_03_bg_pal_bin_bank 4
-extern const unsigned char	stage_06_bg_pal_bin[16];
-#define				stage_06_bg_pal_bin_size 16
-#define				stage_06_bg_pal_bin_bank 4
-extern const unsigned char	stage_05_bg_pal_bin[16];
-#define				stage_05_bg_pal_bin_size 16
-#define				stage_05_bg_pal_bin_bank 4
-extern const unsigned char	title_bg_pal_bin[16];
-#define				title_bg_pal_bin_size 16
-#define				title_bg_pal_bin_bank 4
-extern const unsigned char	main_spr_pal_bin[16];
-#define				main_spr_pal_bin_size 16
-#define				main_spr_pal_bin_bank 4
-extern const unsigned char	stage_07_bg_pal_bin[16];
-#define				stage_07_bg_pal_bin_size 16
-#define				stage_07_bg_pal_bin_bank 4
 extern const unsigned char	flash_bg_pal_bin[16];
 #define				flash_bg_pal_bin_size 16
 #define				flash_bg_pal_bin_bank 4
+extern const unsigned char	main_spr_pal_bin[16];
+#define				main_spr_pal_bin_size 16
+#define				main_spr_pal_bin_bank 4
+extern const unsigned char	stage_01_bg_pal_bin[16];
+#define				stage_01_bg_pal_bin_size 16
+#define				stage_01_bg_pal_bin_bank 4
 extern const unsigned char	stage_02_bg_pal_bin[16];
 #define				stage_02_bg_pal_bin_size 16
 #define				stage_02_bg_pal_bin_bank 4
+extern const unsigned char	stage_03_bg_pal_bin[16];
+#define				stage_03_bg_pal_bin_size 16
+#define				stage_03_bg_pal_bin_bank 4
+extern const unsigned char	stage_04_bg_pal_bin[16];
+#define				stage_04_bg_pal_bin_size 16
+#define				stage_04_bg_pal_bin_bank 4
+extern const unsigned char	stage_05_bg_pal_bin[16];
+#define				stage_05_bg_pal_bin_size 16
+#define				stage_05_bg_pal_bin_bank 4
+extern const unsigned char	stage_06_bg_pal_bin[16];
+#define				stage_06_bg_pal_bin_size 16
+#define				stage_06_bg_pal_bin_bank 4
+extern const unsigned char	stage_07_bg_pal_bin[16];
+#define				stage_07_bg_pal_bin_size 16
+#define				stage_07_bg_pal_bin_bank 4
+extern const unsigned char	title_bg_pal_bin[16];
+#define				title_bg_pal_bin_size 16
+#define				title_bg_pal_bin_bank 4
