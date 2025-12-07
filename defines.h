@@ -12,7 +12,7 @@
 #define GAME_MODE_TEAM_PLAY 2
 
 // Visibility types
-#define IN_VIEW
+#define IN_VIEW 0
 #define OUT_OF_VIEW_TOP 1
 #define OUT_OF_VIEW_BOTTOM 2
 
@@ -22,7 +22,7 @@
 #define GAME_STATE_STAGE 2
 #define GAME_STATE_CUTSCENE_01 3
 #define GAME_STATE_CUTSCENE_02 4
-#define GAMTE_STATE_CUTSCENE_03 5
+#define GAME_STATE_CUTSCENE_03 5
 
 // Entity indexes
 #define INDEX_BLINKY 0
@@ -89,7 +89,7 @@
 #define AUDIO_AFTER_GHOST_CHOMPED 5
 #define AUDIO_EXPLA_LIFE 6
 #define AUDIO_THEY_MEET 7
-#define AUDIO_THE_CHASE 7
+#define AUDIO_THE_CHASE 8
 #define AUDIO_JUNIOR 9
 
 // SFX
