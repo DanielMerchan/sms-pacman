@@ -20,7 +20,7 @@ https://www.youtube.com/playlist?list=PLBYs5vZbDPv6UPqtU_deDSihZjeoCkUsS
 - [x] Part 5  
 - [x] Part 6  
 - [x] Part 7  
-- [ ] Part 8  
+- [x] Part 8  
 - [ ] Part 9  
 - [ ] Part 10  
 - [ ] Part 11  
