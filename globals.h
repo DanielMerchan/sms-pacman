@@ -13,7 +13,7 @@ static unsigned short EntityPrevTile[8];        // The previous tile index based
 static unsigned short EntityX[8];               // Current horizontal position in pixels
 static unsigned short EntityY[8];               // Current vertical position in pixels
 static signed char EntityPixelX[8];             // Horizontal tile pixel amount
-static signed char EntityPixelX[8];             // Vertical tile pixel amount
+static signed char EntityPixelY[8];             // Vertical tile pixel amount
 static signed char EntityDistX[8];              // Horizontal distance to mid tile in pixels
 static signed char EntityDistY[8];              // Vertical distance to mid tile in pixels
 static unsigned char EntityDir[8];              // Entity state constant eg. DIRECTION_RIGHT
@@ -23,7 +23,7 @@ static unsigned char EntitySpeed[8];            // Entity speed in pixels
 static unsigned char EntitySubSpeed[8];         // Max sub speed to be applied to accumulate sub speed
 static unsigned char EntityAccSubSpeed[8];      // Current accumulative sub pixel speed
 static unsigned char EntityFrame[8];            // Current animation frame index
-static signed char EntityFrameDuraration[8];    // The amount of time to show the current frame of animation
+static signed char EntityFrameDuration[8];    // The amount of time to show the current frame of animation
 static unsigned short EntityTimer[8];           // Entity general use timer
 static unsigned char EntityLutIndex[8];         // Look up table index
 static unsigned char EntityTarget[8];           // Target entity
