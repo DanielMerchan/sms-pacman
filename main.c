@@ -25,7 +25,7 @@
 void main(void) {
     play_track(AUDIO_READY, 1);
     while(1) {
-        // PollInput();
+        poll_input();
         SMS_waitForVBlank();
         play_audio();
         FrameCounter++;

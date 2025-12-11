@@ -30,8 +30,8 @@
 #define INDEX_INKY 2
 #define INDEX_SUE 3
 #define INDEX_BONUS 4
-#define INDEX_PLAYER_O1 5
-#define INDEX_PLAYER_O2 6
+#define INDEX_PLAYER_01 5
+#define INDEX_PLAYER_02 6
 #define INDEX_MISC 7
 #define INDEX_AUTO_SCROLL 254
 #define INDEX_NONE 255

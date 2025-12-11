@@ -21,7 +21,7 @@ https://www.youtube.com/playlist?list=PLBYs5vZbDPv6UPqtU_deDSihZjeoCkUsS
 - [x] Part 6  
 - [x] Part 7  
 - [x] Part 8  
-- [ ] Part 9  
+- [x] Part 9  
 - [ ] Part 10  
 - [ ] Part 11  
 - [ ] Part 12  
@@ -62,6 +62,9 @@ This project is primarily for education and exploration of retro game developmen
 - **Welcome to The Pac-Man Dossier**  
   https://pacman.holenet.info/  
   (Extremely detailed documentation of Pac-Man behavior, ghost AI, timing, collision, etc.)
+- **How to program: Lesson 1**
+  https://www.smspower.org/maxim/HowToProgram/Lesson1
+  (Basic on Master Systema and Game Gear concepts such as Tilemap, palette and Memory)
 
 ---
 
