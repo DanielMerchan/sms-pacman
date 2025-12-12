@@ -15,7 +15,6 @@ https://www.youtube.com/playlist?list=PLBYs5vZbDPv6UPqtU_deDSihZjeoCkUsS
 - [x] Part 1  
 - [x] Part 2  
 - [x] Part 3
-    - I had to continue the tutorial in Windows (not Mac) for using [SMS Tile Studio](https://github.com/xfixium/smstilestudio). However, it is buggy for me when ordering Palette colours and changing them. Once fixed, I will upload the `SMSTileStudio` associated project
 - [x] Part 4  
 - [x] Part 5  
 - [x] Part 6  
