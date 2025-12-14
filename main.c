@@ -1,9 +1,9 @@
-#include "lib\SMSlib.h"
-#include "lib\PSGlib.h"
+#include "lib/SMSlib.h"
+#include "lib/PSGlib.h"
 
-#include "banks\bank2.h"
-#include "banks\bank3.h"
-#include "banks\bank4.h"
+#include "banks/bank2.h"
+#include "banks/bank3.h"
+#include "banks/bank4.h"
 
 #include "string.h"
 #include "defines.h"
