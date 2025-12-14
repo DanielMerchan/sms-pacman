@@ -17,6 +17,7 @@ sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt ../main.c
 # Link everything into mspacman.ihx
 # (line continuations use "\" on macOS)
 # ---------------------------------------------------------
+set +e
 sdcc -o mspacman.ihx -mz80 --no-std-crt0 --data-loc 0xC000 \
     -Wl-b_BANK2=0x28000 \
     -Wl-b_BANK3=0x38000 \
@@ -26,6 +27,7 @@ sdcc -o mspacman.ihx -mz80 --no-std-crt0 --data-loc 0xC000 \
     bank3.rel \
     bank4.rel \
     SMSlib.lib ../lib/PSGLib.rel
+set -e
 
 # ---------------------------------------------------------
 # Build SMS ROM
