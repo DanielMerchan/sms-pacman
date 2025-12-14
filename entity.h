@@ -153,15 +153,22 @@ const unsigned short NumbersSquared[] = {
 
 // Gets the distance between two tiles
 unsigned short get_distance(unsigned short tile1, unsigned short tile2) {
-    // Get source tile x and y
-    unsigned char y1 = tile1 >> 5;
-    unsigned char x1 = tile1 - (y1 << 5);
-    // Get target tile x and y
-    unsigned char y2 = tile2 >> 5;
-    unsigned char x2 = tile2 - (y2 << 5);
-    // Get number of tiles between source and target
-    unsigned char x = x1 > x2 ? x1 - x2 : x2 - x1;
-    unsigned char y = y1 > y2 ? y1 - y2 : y2 - y1;
-    // Return distance
-	return NumbersSquared[x] + NumbersSquared[y];
+    // // Get source tile x and y
+    // unsigned char y1 = tile1 >> 5;
+    // unsigned char x1 = tile1 - (y1 << 5);
+    // // Get target tile x and y
+    // unsigned char y2 = tile2 >> 5;
+    // unsigned char x2 = tile2 - (y2 << 5);
+    // // Get number of tiles between source and target
+    // unsigned char x = x1 > x2 ? x1 - x2 : x2 - x1;
+    // unsigned char y = y1 > y2 ? y1 - y2 : y2 - y1;
+    // // Return distance
+	// return NumbersSquared[x] + NumbersSquared[y];
+
+    // Performance unreadable version below
+    // Get absolute differences in x and y tile coordinates (using & 31 for x, >> 5 for y)
+    unsigned char dx = (tile1 & 31) > (tile2 & 31) ? (tile1 & 31) - (tile2 & 31) : (tile2 & 31) - (tile1 & 31);
+    unsigned char dy = (tile1 >> 5) > (tile2 >> 5) ? (tile1 >> 5) - (tile2 >> 5) : (tile2 >> 5) - (tile1 >> 5);
+    // Return squared distance
+    return NumbersSquared[dx] + NumbersSquared[dy];
 }
