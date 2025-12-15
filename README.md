@@ -23,7 +23,7 @@ https://www.youtube.com/playlist?list=PLBYs5vZbDPv6UPqtU_deDSihZjeoCkUsS
 - [x] Part 9  
 - [x] Part 10  
 - [x] Part 11  
-- [ ] Part 12  
+- [x] Part 12  
 - [ ] Part 13  
 - [ ] Part 14  
 - [ ] Part 15  
