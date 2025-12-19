@@ -25,7 +25,7 @@ https://www.youtube.com/playlist?list=PLBYs5vZbDPv6UPqtU_deDSihZjeoCkUsS
 - [x] Part 11  
 - [x] Part 12  
 - [x] Part 13  
-- [ ] Part 14  
+- [x] Part 14  
 - [ ] Part 15  
 - [ ] Part 16  
 - [ ] Part 17  

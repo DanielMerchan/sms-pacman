@@ -329,12 +329,12 @@ void ghost_check_collision(unsigned char index) {
         // Award points and return
         GhostPointAcc = GhostPointAcc == 0 ? 200 : GhostPointAcc << 1;
         switch (GhostPointAcc) {
-            case 200: add_score(target, POINTS_200); PlayTrack(AUDIO_AFTER_GHOST_CHOMPED, 1); break;
+            case 200: add_score(target, POINTS_200); play_track(AUDIO_AFTER_GHOST_CHOMPED, 1); break;
             case 400: add_score(target, POINTS_400); break;
             case 800: add_score(target, POINTS_800); break;
             case 1600: add_score(target, POINTS_1600); break;
         }
-        PlaySFX(SFX_GHOST_CHOMPED, SFX_CHANNEL2);
+        play_sfx(SFX_GHOST_CHOMPED, SFX_CHANNEL2);
         return;
     }
     // Player chomped
@@ -355,10 +355,10 @@ void ghost_check_collision(unsigned char index) {
 // Check all available directions around the given tile
 void set_ghost_available_directions(unsigned short tile, unsigned char dir) {
     // If the opposite direction of the current direction or the next tile is solid, set as zero, else one
-    GhostDirs[DIRECTION_RIGHT] = dir == DIRECTION_LEFT ? 0 : GetMapTileId(tile + 1) > TILE_SOLID ? 0 : 1;
-    GhostDirs[DIRECTION_DOWN] = dir == DIRECTION_UP ? 0 : GetMapTileId(tile + 32) > TILE_SOLID ? 0 : 1;
-    GhostDirs[DIRECTION_LEFT] = dir == DIRECTION_RIGHT ? 0 : GetMapTileId(tile - 1) > TILE_SOLID ? 0 : 1;
-    GhostDirs[DIRECTION_UP] = dir == DIRECTION_DOWN ? 0 : GetMapTileId(tile - 32) > TILE_SOLID ? 0 : 1;
+    GhostDirs[DIRECTION_RIGHT] = dir == DIRECTION_LEFT ? 0 : get_map_tile_id(tile + 1) > TILE_SOLID ? 0 : 1;
+    GhostDirs[DIRECTION_DOWN] = dir == DIRECTION_UP ? 0 : get_map_tile_id(tile + 32) > TILE_SOLID ? 0 : 1;
+    GhostDirs[DIRECTION_LEFT] = dir == DIRECTION_RIGHT ? 0 : get_map_tile_id(tile - 1) > TILE_SOLID ? 0 : 1;
+    GhostDirs[DIRECTION_UP] = dir == DIRECTION_DOWN ? 0 : get_map_tile_id(tile - 32) > TILE_SOLID ? 0 : 1;
     // Add all available directions up
     GhostDirs[DIRECTION_ALL] = GhostDirs[DIRECTION_RIGHT] + GhostDirs[DIRECTION_DOWN] + GhostDirs[DIRECTION_LEFT] + GhostDirs[DIRECTION_UP];
 }
@@ -368,7 +368,7 @@ void set_random_ghost_direction(unsigned char index) {
     // Set available ghost directions
     set_ghost_available_directions(EntityTile[index], EntityDir[index]);
     // Set random direction
-    unsigned char rng = GetRng(6, 0);
+    unsigned char rng = get_rng(6, 0);
     while (GhostDirs[rng] <= 0) {
         rng = (rng + 1) & 3;
     }
@@ -522,7 +522,7 @@ void ghost_entering(unsigned char index) {
         // At center, move down
         } else {
             EntityDir[index] = DIRECTION_DOWN;
-            MoveEntity(index, DIRECTION_DOWN);
+            move_entity(index, DIRECTION_DOWN);
             // If vertical position is at threshold maximum
             if (EntityY[index] >= 140) {
                 // Set to vertical max
@@ -620,7 +620,7 @@ void inky_chase(unsigned char target) {
         y1 -= y;
     }
     // Move towards target tile id
-    GhostMoveTowardsTarget(INDEX_INKY, (y1 << 5) + x1);
+    ghost_move_towards_target(INDEX_INKY, (y1 << 5) + x1);
 }
 
 // Sue chase behavior
@@ -798,7 +798,7 @@ void ghost_chasing(unsigned char index) {
 #endif
 
 // Updates ghost state
-void UpdateGhostState(unsigned char index) {
+void update_ghost_state(unsigned char index) {
     // Get state
     unsigned char state = EntityState[index];
     // Set ghost's tile index
