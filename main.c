@@ -29,7 +29,7 @@ void main(void) {
         SMS_waitForVBlank();
         play_audio();
         FrameCounter++;
-        // Handle game state();
+        handle_game_state();
     }
 }
 

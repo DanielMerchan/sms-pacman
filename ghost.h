@@ -293,7 +293,7 @@ void set_all_ghost_states(unsigned char state) {
 }
 
 // Set ghost mode
-void set_ghost_model(unsigned char ghostMode) {
+void set_ghost_mode(unsigned char ghostMode) {
     if (CurrentPlayer == INDEX_PLAYER_01) {
         P1GhostMode = ghostMode;
     } else {

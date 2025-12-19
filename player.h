@@ -524,7 +524,7 @@ void update_player_state(unsigned char index) {
 }
 
 // Updates player
-void UpdatePlayer(unsigned char index) {
+void update_player(unsigned char index) {
 	update_player_sprites(index);
 	update_player_state(index);
 	update_player_frame(index);
