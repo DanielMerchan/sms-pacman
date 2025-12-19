@@ -23,8 +23,7 @@
 #include "game.h"
 
 void main(void) {
-    play_track(AUDIO_READY, 1);
-    while(1) {
+    for(;;) {
         poll_input();
         SMS_waitForVBlank();
         play_audio();

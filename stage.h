@@ -247,6 +247,29 @@ void update_stage_palette(void) {
 	}
 }
 
+// Flash stage when cleared
+void flash_stage(void) {
+	// Flash stage graphics off
+	if (Accumulator++ == TIME_24) {
+		SMS_mapROMBank(flash_bg_pal_bin_bank);
+		SMS_loadBGPalette(flash_bg_pal_bin);
+	// Flash stage graphics on
+	} else if (Accumulator++ >= TIME_48) {
+		SMS_mapROMBank(StagePaletteBank);
+		SMS_loadBGPalette(StagePaletteBin);
+		Accumulator = 0;
+	}
+}
+
+// Updates sprites with set states
+void update_stage_sprites(void) {
+	// Refresh frames from any previous state
+	update_ghost_sprites(INDEX_BLINKY);
+	update_ghost_sprites(INDEX_PINKY);
+	update_ghost_sprites(INDEX_INKY);
+	update_ghost_sprites(INDEX_SUE);
+}
+
 // Updates scrolling for the stage based on player
 void update_stage_scroll(void) {
 	if (EntityState[CurrentPlayer] == ENTITY_STATE_MOVING && EntityDir[CurrentPlayer] == DIRECTION_UP && EntityY[CurrentPlayer] - ScrollY <= 88) {
@@ -521,7 +544,7 @@ void update_stage(void) {
 		break;
 		// Game over
 		case 10:
-			// Pause a bit, go to title
+			// Pause a bit, restart game
 			if (increment_timer(TIME_120) == 1) {
 				reset_player_variables();
 				GameState = GAME_STATE_TITLE;

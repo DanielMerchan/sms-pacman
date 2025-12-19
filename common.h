@@ -21,18 +21,17 @@ void reset_global_variables(void) {
     SMS_setLineCounter(0);
     SMS_disableLineInterrupt();
     SubState = 0;
-    FrameCounter = 0;
-    Timer = 0;
-    Accumulator = 0;
+	FrameCounter = 0;
+	Timer = 0;
+	Accumulator = 0;
     ScrollYAmount = 0;
     ScrollY = 0;
     ScrollLock = 0;
-    Track = AUDIO_NONE;
-    PrevTrack = AUDIO_NONE;
+    Track = 0;
+    PrevTrack = 0;
     Paused = 0;
     ActClackerFrame = 0;
-    AutoScrollDir = 0;
-    Sfx = SFX_NONE;
+    AutoScrollDir = DIRECTION_NONE;
 }
 
 void reset_scores(void) {

@@ -112,6 +112,26 @@ void set_ghost(unsigned char index, unsigned char dir, unsigned char state, unsi
     EntityFrameDuration[index] = -1;
 }
 
+// Updates test marker sprites
+void update_test_marker(unsigned char index, unsigned char state) {
+    // If the ghost is in a state we shouldn't override, return
+    if (EntityState[index] > ENTITY_STATE_POINTS) {
+        return;
+    }
+    // Force given state on ghost
+    EntityState[index] = state;
+    // Set the target position to misc entity
+    set_entity_position_by_tile_index(INDEX_MISC, EntityTargetTile[index]);
+    // If out of view, return
+    if (EntityY[INDEX_MISC] + 16 < ScrollY || EntityY[INDEX_MISC] > (ScrollY + 192)) {
+        return;
+    }
+    // Offset vertical coordinate from hardware scroll
+	unsigned char y = EntityY[INDEX_MISC] - ScrollY;
+    // Add marker sprite
+	SMS_addMetaSprite(EntityX[INDEX_MISC], y, ghost_marker);
+}
+
 // Updates ghost sprites
 void update_ghost_sprites(unsigned char index) {
     // Get state
@@ -269,6 +289,7 @@ void set_ghost_reverse_direction(unsigned char index) {
     }
 }
 
+// Sets all ghosts to given state
 void set_all_ghost_states(unsigned char state) {
     // Stop ghost processing for a frame, as this is an intensive function
     GhostProcessing = 1;
@@ -708,7 +729,7 @@ void ghost_scattering(unsigned char index) {
         ghost_move_towards_target(index, ScatterTargets[index]);
     // Set random corner for Blinky and Pinky
     } else {
-        ghost_move_towards_target(index, ScatterTargets[get_rng(6, GhostOffsets[index])]);
+         ghost_move_towards_target(index, ScatterTargets[get_rng(6, GhostOffsets[index])]);
     }
 }
 
