@@ -1,6 +1,3 @@
-// Test array, for debugging
-unsigned short Tests[8];
-
 // Indexes: 0 = blinky, 1 = pinky, 2 = inky, 3 = sue, 4 = bonus, 5 = player 1, 6 = player 2, 7 = misc. eg. INDEX_PLAYER_01
 static unsigned char EntityType[8];             // The type of entity constant eg. ENTITY_BONUS_CHERRY
 static unsigned short EntityTile[8];            // The tile index based on position

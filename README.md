@@ -27,8 +27,8 @@ https://www.youtube.com/playlist?list=PLBYs5vZbDPv6UPqtU_deDSihZjeoCkUsS
 - [x] Part 13  
 - [x] Part 14  
 - [x] Part 15  
-- [ ] Part 16  
-- [ ] Part 17  
+- [x] Part 16  
+- [x] Part 17  
 
 (Each part focuses on different aspects of SMS development: setting up SDCC, drawing tiles, handling VRAM, sprites, movement logic, collision, etc.)
 
@@ -66,8 +66,3 @@ This project is primarily for education and exploration of retro game developmen
   (Basic on Master Systema and Game Gear concepts such as Tilemap, palette and Memory)
 
 ---
-
-## 📌 Notes
-- SMS Tile Studio project files are currently not included due to issues on my Windows machine.
-- As this project grows, more sections will be added: build instructions, screenshots, gameplay notes, etc.
-
